@@ -18,7 +18,6 @@ class Translator
       middle_array.push(alphabet.alphabet[letter.downcase][1])
       bottom_array.push(alphabet.alphabet[letter.downcase][2])
     end
-    binding.pry
   end
 
 end
