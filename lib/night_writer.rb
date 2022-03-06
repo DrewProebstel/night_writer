@@ -27,9 +27,11 @@ class Night_writer
     text.length
   end
 end
+
 if $0 == __FILE__
   message = Night_writer.new(ARGV)
   message.get_message
   message.write
   puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
+  binding.pry
 end
