@@ -1,3 +1,4 @@
+require './lib/translator'
 require 'pry'
 class Night_writer
   attr_accessor :to_read, :to_write
@@ -15,7 +16,6 @@ class Night_writer
 
   def write
     capitalized_test = get_message.to_s
-
     writer = File.open(@to_write, "w")
     writer.write(capitalized_test)
   end
@@ -27,10 +27,9 @@ class Night_writer
     text.length
   end
 end
-if $PROGRAM_NAME == __FILE__
+if $0 == __FILE__
   message = Night_writer.new(ARGV)
+  message.get_message
+  message.write
+  puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
 end
-
-message.get_message
-message.write
-puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
