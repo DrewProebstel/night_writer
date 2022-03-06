@@ -10,7 +10,6 @@ class Translator
     @middle_array = []
     @bottom_array = []
     @alphabet = alphabet
-    binding.pry
   end
   def translate
     text.each_char do |letter|
