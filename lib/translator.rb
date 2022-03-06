@@ -11,6 +11,7 @@ class Translator
     @bottom_array = []
     @alphabet = alphabet
   end
+
   def translate
     text.each_char do |letter|
       top_array.push(alphabet.alphabet[letter][0])
@@ -18,4 +19,5 @@ class Translator
       bottom_array.push(alphabet.alphabet[letter][2])
     end
   end
+
 end
