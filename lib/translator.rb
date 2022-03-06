@@ -14,9 +14,9 @@ class Translator
 
   def translate
     text.each_char do |letter|
-      top_array.push(alphabet.alphabet[letter][0])
-      middle_array.push(alphabet.alphabet[letter][1])
-      bottom_array.push(alphabet.alphabet[letter][2])
+      top_array.push(alphabet.alphabet[letter.downcase][0])
+      middle_array.push(alphabet.alphabet[letter.downcase][1])
+      bottom_array.push(alphabet.alphabet[letter.downcase][2])
     end
   end
 
