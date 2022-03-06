@@ -1,9 +1,9 @@
 require 'pry'
 class Night_writer
   attr_accessor :to_read, :to_write
-  def initialize()
-    @to_read = ARGV[0]
-    @to_write = ARGV[1]
+  def initialize(args)
+    @to_read = args[0]
+    @to_write = args[1]
   end
 
   def get_message
@@ -27,7 +27,10 @@ class Night_writer
     text.length
   end
 end
-message = Night_writer.new
+if $PROGRAM_NAME == __FILE__
+  message = Night_writer.new(ARGV)
+end
+
 message.get_message
 message.write
 puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
