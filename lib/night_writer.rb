@@ -1,4 +1,5 @@
 require './lib/translator'
+require './lib/alphabet'
 require 'pry'
 class Night_writer
   attr_accessor :to_read, :to_write
@@ -15,9 +16,13 @@ class Night_writer
   end
 
   def write
-    capitalized_test = get_message.to_s
+    # capitalized_test = get_message.to_s
+    # writer = File.open(@to_write, "w")
+    # writer.write(capitalized_test)
     writer = File.open(@to_write, "w")
-    writer.write(capitalized_test)
+    lines = File.readlines(@to_write)
+    lines[0] = text.top_array.flatten.join << $/
+    writer.close
   end
 
   def count_lines
@@ -30,8 +35,10 @@ end
 
 if $0 == __FILE__
   message = Night_writer.new(ARGV)
+  alphabet = Alphabet.new
+  text = Translator.new(message,alphabet)
+  binding.pry
   message.get_message
   message.write
   puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
-  binding.pry
 end

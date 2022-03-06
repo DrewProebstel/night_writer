@@ -5,7 +5,7 @@ require 'pry'
 class Translator
   attr_accessor :text, :top_array, :bottom_array, :middle_array, :alphabet
   def initialize(input,alphabet)
-    @text = input.get_message.delete!("\n")
+    @text = input.get_message.tr("\n", " ")
     @top_array = []
     @middle_array = []
     @bottom_array = []
@@ -18,6 +18,7 @@ class Translator
       middle_array.push(alphabet.alphabet[letter.downcase][1])
       bottom_array.push(alphabet.alphabet[letter.downcase][2])
     end
+    binding.pry
   end
 
 end
