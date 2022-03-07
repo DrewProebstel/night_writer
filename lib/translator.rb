@@ -13,7 +13,7 @@ class Translator
   end
 
   def translate
-    text.length do |letter|
+    text.each_char do |letter|
       top_array.push(alphabet.alphabet[letter.downcase][0])
       middle_array.push(alphabet.alphabet[letter.downcase][1])
       bottom_array.push(alphabet.alphabet[letter.downcase][2])

@@ -1,7 +1,7 @@
 require './lib/translator'
 require './lib/alphabet'
 require 'pry'
-class Night_writer
+class Night_reader
   attr_accessor :to_read, :to_write
   def initialize(args)
     @to_read = args[0]
@@ -15,20 +15,8 @@ class Night_writer
     incoming_text
   end
 
-  def write(top_array,middle_array,bottom_array)
-    capitalized_test = get_message.upcase
-    writer = File.open(@to_write, "w")
-    index = 0
-    while top_array.length > index do
-    writer.write(top_array[index..index+39].flatten.join)
-    writer.write("\n")
-    writer.write(middle_array[index..index+39].flatten.join)
-    writer.write("\n")
-    writer.write(bottom_array[index..index+39].flatten.join)
-    writer.write("\n")
-    writer.write("\n")
-    index += 40
-    end
+  def write()
+
   end
 
   def count_lines
@@ -40,7 +28,7 @@ class Night_writer
 end
 
 if $0 == __FILE__
-  message = Night_writer.new(ARGV)
+  message = Night_reader.new(ARGV)
   alphabet = Alphabet.new
   text = Translator.new(message,alphabet)
   message.get_message
