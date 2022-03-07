@@ -18,21 +18,17 @@ class Night_writer
   def write(top_array,middle_array,bottom_array)
     capitalized_test = get_message.upcase
     writer = File.open(@to_write, "w")
-    writer.write(top_array.flatten.join)
+    index = 0
+    while top_array.length > index do
+    writer.write(top_array[index..index+39].flatten.join)
     writer.write("\n")
-    writer.write(middle_array.flatten.join)
+    writer.write(middle_array[index..index+39].flatten.join)
     writer.write("\n")
-    writer.write(bottom_array.flatten.join)
-
-
-
-    # File.open(@to_write, 'r+') do |file|
-    #   lines = file.each_line.to_a
-    #   lines[0] = top_array.flatten.join
-    #   lines[1] = middle_array.flatten.join
-    #   lines[2] = bottom_array.flatten.join
-    #   file.write(lines.join)
-    # end
+    writer.write(bottom_array[index..index+39].flatten.join)
+    writer.write("\n")
+    writer.write("\n")
+    index += 40
+    end
   end
 
   def count_lines
