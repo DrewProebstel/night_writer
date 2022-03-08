@@ -1,5 +1,6 @@
-require './lib/translator'
-require './lib/alphabet'
+require './lib/night_reader.rb'
+require './lib/night_reader_translator'
+require './lib/night_reader_alphabet'
 require 'pry'
 class Night_reader
   attr_accessor :to_read, :to_write
@@ -21,12 +22,16 @@ class Night_reader
     text = lines.join
     text.length
   end
+
+  def write
+
+  end
 end
 
 if $0 == __FILE__
   message = Night_reader.new(ARGV)
-  alphabet = Alphabet.new
-  text = Translator.new(message,alphabet)
+  alphabet = Alphabet_reader.new
+  text = Translator_reader.new(message,alphabet)
   message.get_message
   text.translate
   message.write(text.top_array,text.middle_array,text.bottom_array)
