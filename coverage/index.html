@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-08T13:26:57-08:00">2022-03-08T13:26:57-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-08T14:11:23-08:00">2022-03-08T14:11:23-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  75.69%
+  74.83%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.06
+         4.97
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>144</b> relevant lines,
-    <span class="green"><b>109</b> lines covered</span> and
-    <span class="red"><b>35</b> lines missed. </span>
+    <b>147</b> relevant lines,
+    <span class="green"><b>110</b> lines covered</span> and
+    <span class="red"><b>37</b> lines missed. </span>
     (<span class="red">
-  75.69%
+  74.83%
 </span>
 )
   </div>
@@ -116,23 +116,23 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b40693ea99edb022170786b619763431f91246c3" class="src_link" title="lib/night_writer.rb">lib/night_writer.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">41.03 %</td>
-            <td class="cell--number">50</td>
-            <td class="cell--number">39</td>
+            <td class="red strong cell--number t-file__coverage">57.14 %</td>
+            <td class="cell--number">54</td>
+            <td class="cell--number">28</td>
             <td class="cell--number">16</td>
-            <td class="cell--number">23</td>
-            <td class="cell--number">0.56</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">0.79</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#da87226f576cc1be3bb7ae747618a850b6174109" class="src_link" title="lib/translator.rb">lib/translator.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.88</td>
+            <td class="red strong cell--number t-file__coverage">56.67 %</td>
+            <td class="cell--number">40</td>
+            <td class="cell--number">30</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">1.03</td>
             
           </tr>
         
@@ -1338,7 +1338,7 @@
     <h3>lib/night_writer.rb</h3>
     <h4>
       <span class="red">
-  41.03%
+  57.14%
 </span>
 
       lines covered
@@ -1347,9 +1347,9 @@
     
 
     <div class="t-line-summary">
-      <b>39</b> relevant lines.
+      <b>28</b> relevant lines.
       <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>23</b> lines missed.</span>
+      <span class="red"><b>12</b> lines missed.</span>
     </div>
 
     
@@ -1553,7 +1553,7 @@
 
             
 
-            <code class="ruby">  def write(top_array,middle_array,bottom_array)</code>
+            <code class="ruby">  def write(string)</code>
           </li>
         </div>
       
@@ -1564,128 +1564,128 @@
 
             
 
-            <code class="ruby">    capitalized_test = get_message.upcase</code>
+            <code class="ruby">    to_write = File.open(@to_write, &quot;w&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
             
 
-            <code class="ruby">    writer = File.open(@to_write, &quot;w&quot;)</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
             
 
-            <code class="ruby">    index = 0</code>
+            <code class="ruby">  # def write(top_array,middle_array,bottom_array)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="22">
             
             
 
             
 
-            <code class="ruby">    while top_array.length &gt; index do</code>
+            <code class="ruby">  #   capitalized_test = get_message.upcase</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
             
 
-            <code class="ruby">    writer.write(top_array[index..index+39].flatten.join)</code>
+            <code class="ruby">  #   writer = File.open(@to_write, &quot;w&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
             
 
-            <code class="ruby">    writer.write(&quot;\n&quot;)</code>
+            <code class="ruby">  #   index = 0</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
             
 
-            <code class="ruby">    writer.write(middle_array[index..index+39].flatten.join)</code>
+            <code class="ruby">  #   while top_array.length &gt; index do</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
             
 
-            <code class="ruby">    writer.write(&quot;\n&quot;)</code>
+            <code class="ruby">  #   writer.write(top_array[index..index+39].flatten.join)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="27">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
             
 
-            <code class="ruby">    writer.write(bottom_array[index..index+39].flatten.join)</code>
+            <code class="ruby">  #   writer.write(&quot;\n&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
             
 
-            <code class="ruby">    writer.write(&quot;\n&quot;)</code>
+            <code class="ruby">  #   writer.write(middle_array[index..index+39].flatten.join)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
             
 
-            <code class="ruby">    writer.write(&quot;\n&quot;)</code>
+            <code class="ruby">  #   writer.write(&quot;\n&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="30">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
             
 
-            <code class="ruby">    index += 40</code>
+            <code class="ruby">  #   writer.write(bottom_array[index..index+39].flatten.join)</code>
           </li>
         </div>
       
@@ -1696,7 +1696,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  #   writer.write(&quot;\n&quot;)</code>
           </li>
         </div>
       
@@ -1707,7 +1707,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  #   writer.write(&quot;\n&quot;)</code>
           </li>
         </div>
       
@@ -1718,12 +1718,45 @@
 
             
 
+            <code class="ruby">  #   index += 40</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">  #   end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">  # end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
+          <li class="covered" data-hits="1" data-linenumber="37">
             <span class="hits">1</span>
             
 
@@ -1734,7 +1767,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="35">
+          <li class="missed" data-hits="0" data-linenumber="38">
             
             
 
@@ -1745,7 +1778,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="36">
+          <li class="missed" data-hits="0" data-linenumber="39">
             
             
 
@@ -1756,7 +1789,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="37">
+          <li class="missed" data-hits="0" data-linenumber="40">
             
             
 
@@ -1767,7 +1800,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="38">
+          <li class="missed" data-hits="0" data-linenumber="41">
             
             
 
@@ -1778,7 +1811,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -1789,7 +1822,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
@@ -1800,7 +1833,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -1811,7 +1844,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
+          <li class="covered" data-hits="1" data-linenumber="45">
             <span class="hits">1</span>
             
 
@@ -1822,7 +1855,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="43">
+          <li class="missed" data-hits="0" data-linenumber="46">
             
             
 
@@ -1833,7 +1866,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="44">
+          <li class="missed" data-hits="0" data-linenumber="47">
             
             
 
@@ -1844,7 +1877,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="45">
+          <li class="missed" data-hits="0" data-linenumber="48">
             
             
 
@@ -1855,7 +1888,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="46">
+          <li class="missed" data-hits="0" data-linenumber="49">
             
             
 
@@ -1866,7 +1899,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="47">
+          <li class="missed" data-hits="0" data-linenumber="50">
             
             
 
@@ -1877,18 +1910,29 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="48">
+          <li class="missed" data-hits="0" data-linenumber="51">
             
             
 
             
 
-            <code class="ruby">  message.write(text.top_array,text.middle_array,text.bottom_array)</code>
+            <code class="ruby">  text.compile_arry(text.top_array,text.middle_array,text.bottom_array)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="53">
             
             
 
@@ -1899,7 +1943,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
@@ -1918,8 +1962,8 @@
   <div class="header">
     <h3>lib/translator.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="red">
+  56.67%
 </span>
 
       lines covered
@@ -1928,9 +1972,9 @@
     
 
     <div class="t-line-summary">
-      <b>16</b> relevant lines.
-      <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>30</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>13</b> lines missed.</span>
     </div>
 
     
@@ -1974,13 +2018,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
 
-            <code class="ruby">class Translator</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1991,7 +2035,7 @@
 
             
 
-            <code class="ruby">  attr_accessor :text, :top_array, :bottom_array, :middle_array, :alphabet</code>
+            <code class="ruby">class Translator</code>
           </li>
         </div>
       
@@ -2002,18 +2046,18 @@
 
             
 
-            <code class="ruby">  def initialize(input,alphabet)</code>
+            <code class="ruby">  attr_accessor :text, :top_array, :bottom_array, :middle_array, :alphabet</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="7">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    @text = input.get_message.tr(&quot;\n&quot;, &quot; &quot;)</code>
+            <code class="ruby">  def initialize(input,alphabet)</code>
           </li>
         </div>
       
@@ -2024,7 +2068,7 @@
 
             
 
-            <code class="ruby">    @top_array = []</code>
+            <code class="ruby">    @text = input.get_message.tr(&quot;\n&quot;, &quot; &quot;)</code>
           </li>
         </div>
       
@@ -2035,7 +2079,7 @@
 
             
 
-            <code class="ruby">    @middle_array = []</code>
+            <code class="ruby">    @top_array = []</code>
           </li>
         </div>
       
@@ -2046,7 +2090,7 @@
 
             
 
-            <code class="ruby">    @bottom_array = []</code>
+            <code class="ruby">    @middle_array = []</code>
           </li>
         </div>
       
@@ -2057,18 +2101,18 @@
 
             
 
-            <code class="ruby">    @alphabet = alphabet</code>
+            <code class="ruby">    @bottom_array = []</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="12">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    @alphabet = alphabet</code>
           </li>
         </div>
       
@@ -2079,18 +2123,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="14">
+            
             
 
             
 
-            <code class="ruby">  def translate</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2101,18 +2145,18 @@
 
             
 
-            <code class="ruby">    text.each_char do |letter|</code>
+            <code class="ruby">  def translate</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="16">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      top_array.push(alphabet.alphabet[letter.downcase][0])</code>
+            <code class="ruby">    text.each_char do |letter|</code>
           </li>
         </div>
       
@@ -2123,7 +2167,7 @@
 
             
 
-            <code class="ruby">      middle_array.push(alphabet.alphabet[letter.downcase][1])</code>
+            <code class="ruby">      top_array.push(alphabet.alphabet[letter.downcase][0])</code>
           </li>
         </div>
       
@@ -2134,18 +2178,18 @@
 
             
 
-            <code class="ruby">      bottom_array.push(alphabet.alphabet[letter.downcase][2])</code>
+            <code class="ruby">      middle_array.push(alphabet.alphabet[letter.downcase][1])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
-            
-            
-
+          <li class="covered" data-hits="4" data-linenumber="19">
+            <span class="hits">4</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">      bottom_array.push(alphabet.alphabet[letter.downcase][2])</code>
           </li>
         </div>
       
@@ -2156,7 +2200,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -2167,12 +2211,210 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def compile_arry(top_array,middle_array,bottom_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">    full_string = StringIO.new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby">    index = 0</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">    while top_array.length &gt; index do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">    writer.puts(top_array[index..index+39].flatten.join)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">    writer.puts</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">    writer.write(middle_array[index..index+39].flatten.join)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">    writer.puts</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">    writer.write(bottom_array[index..index+39].flatten.join)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">    writer.puts</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">    writer.puts</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">    index += 40</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">  return full_string</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby">  binding.pry</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="39">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
