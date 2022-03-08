@@ -19,21 +19,6 @@ class Night_writer
     to_write = File.open(@to_write, "w")
     to_write.write(string)
   end
-  # def write(top_array,middle_array,bottom_array)
-  #   capitalized_test = get_message.upcase
-  #   writer = File.open(@to_write, "w")
-  #   index = 0
-  #   while top_array.length > index do
-  #   writer.write(top_array[index..index+39].flatten.join)
-  #   writer.write("\n")
-  #   writer.write(middle_array[index..index+39].flatten.join)
-  #   writer.write("\n")
-  #   writer.write(bottom_array[index..index+39].flatten.join)
-  #   writer.write("\n")
-  #   writer.write("\n")
-  #   index += 40
-  #   end
-  # end
 
   def count_char
     lines = File.readlines(@to_read)
