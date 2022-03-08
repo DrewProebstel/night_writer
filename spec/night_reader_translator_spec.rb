@@ -6,12 +6,11 @@ require 'pry'
 
 
 RSpec.describe Translator_reader do
-  xit "read specific line reads a specific line" do
+  it "read specific line reads a specific line" do
     argument = ['line_in_test.txt', 'output.txt']
     message = Night_reader.new(argument)
     alphabet = Alphabet_reader.new
     text = Translator_reader.new(message,alphabet)
-    binding.pry
     expect(text.read_specfic_line(1)).to eq("00.00.00..\n")
   end
 
