@@ -15,15 +15,20 @@ class Translator_reader
 
   def read_specfic_line(line)
     specific_line = IO.readlines(text)[line]
-    binding.pry
   end
+
   def translate
+    final_array = []
     index = 0
-    text.length do |letter|
-      read_specfic_line(index/40)
-      read_specfic_line(1 + index/40)
-      read_specfic_line(2 + index/40)
+    (char_count/6).times do
+      to_test = []
+      to_test.push(read_specfic_line((index/39)*4)[index*2%40..index*2%40+1])
+      to_test.push(read_specfic_line(1 + (index/39)*4)[index*2%40..index*2%40+1])
+      to_test.push(read_specfic_line(2 + (index/39)*4)[index*2%40..index*2%40+1])
+      final_array.push(to_test)
+      index += 1
     end
+    return final_array
   end
 
 end
