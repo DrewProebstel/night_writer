@@ -23,8 +23,9 @@ class Night_reader
     text.length
   end
 
-  def write
-
+  def writes(translator)
+    writer = File.open(@to_write, "w")
+    writer.write(translator.translate(translator.make_array))
   end
 end
 
@@ -33,7 +34,6 @@ if $0 == __FILE__
   alphabet = Alphabet_reader.new
   text = Translator_reader.new(message,alphabet)
   message.get_message
-  text.translate
-  message.write(text.top_array,text.middle_array,text.bottom_array)
+  message.writes(text)
   puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
 end
