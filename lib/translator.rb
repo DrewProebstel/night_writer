@@ -30,7 +30,6 @@ class Translator
     full_string.puts
     index += 40
     end
-    binding.pry
     return full_string.string
   end
 

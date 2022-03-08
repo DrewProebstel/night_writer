@@ -35,7 +35,7 @@ class Night_writer
   #   end
   # end
 
-  def count_lines
+  def count_char
     lines = File.readlines(@to_read)
     line_count = lines.size
     text = lines.join
@@ -50,5 +50,5 @@ if $0 == __FILE__
   message.get_message
   text.translate
   message.write(text.compile_array)
-  puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
+  puts "Created '#{message.to_write}' containing #{message.count_char} characters"
 end
