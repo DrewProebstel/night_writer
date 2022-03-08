@@ -35,5 +35,5 @@ if $0 == __FILE__
   text = Translator_reader.new(message,alphabet)
   message.get_message
   message.writes(text)
-  puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
+  puts "Created '#{message.to_write}' containing #{message.count_lines/6} characters"
 end
