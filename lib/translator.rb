@@ -20,4 +20,17 @@ class Translator
     end
   end
 
+  def compile_array
+    full_string = StringIO.new
+    index = 0
+    while top_array.length > index do
+    full_string.puts(top_array[index..index+39].flatten.join)
+    full_string.puts(middle_array[index..index+39].flatten.join)
+    full_string.puts(bottom_array[index..index+39].flatten.join)
+    full_string.puts
+    index += 40
+    end
+    return full_string.string
+  end
+
 end

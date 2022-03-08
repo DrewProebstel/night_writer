@@ -1,3 +1,5 @@
+require 'simplecov'
+SimpleCov.start
 require 'rspec'
 require './lib/night_reader.rb'
 require './lib/night_reader_translator'

@@ -15,23 +15,12 @@ class Night_writer
     incoming_text
   end
 
-  def write(top_array,middle_array,bottom_array)
-    capitalized_test = get_message.upcase
-    writer = File.open(@to_write, "w")
-    index = 0
-    while top_array.length > index do
-    writer.write(top_array[index..index+39].flatten.join)
-    writer.write("\n")
-    writer.write(middle_array[index..index+39].flatten.join)
-    writer.write("\n")
-    writer.write(bottom_array[index..index+39].flatten.join)
-    writer.write("\n")
-    writer.write("\n")
-    index += 40
-    end
+  def write(string)
+    to_write = File.open(@to_write, "w")
+    to_write.write(string)
   end
 
-  def count_lines
+  def count_char
     lines = File.readlines(@to_read)
     line_count = lines.size
     text = lines.join
@@ -45,6 +34,6 @@ if $0 == __FILE__
   text = Translator.new(message,alphabet)
   message.get_message
   text.translate
-  message.write(text.top_array,text.middle_array,text.bottom_array)
-  puts "Created '#{message.to_write}' containing #{message.count_lines} characters"
+  message.write(text.compile_array)
+  puts "Created '#{message.to_write}' containing #{message.count_char} characters"
 end
