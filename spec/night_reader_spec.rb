@@ -31,4 +31,21 @@ RSpec.describe Translator_reader do
     text = Translator_reader.new(message,alphabet)
     expect(text.translate(text.make_array)).to eq("a b c d e f g h i j k l m n o p q r s t u v w x y z ")
   end
+
+  it "get_message" do
+    argument = ['braille1.txt', 'output.txt']
+    message = Night_reader.new(argument)
+    alphabet = Alphabet_reader.new
+    text = Translator_reader.new(message,alphabet)
+    message.get_message
+  end
+
+  it "writes" do
+    argument = ['braille1.txt', 'output.txt']
+    message = Night_reader.new(argument)
+    alphabet = Alphabet_reader.new
+    text = Translator_reader.new(message,alphabet)
+    message.get_message
+    message.writes(text)
+  end
 end
