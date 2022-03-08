@@ -4,6 +4,7 @@ require './lib/alphabet.rb'
 require 'rspec'
 RSpec.describe Translator do
   it " trasnslator is translator class" do
+
     arguments = ['message.txt', 'foo.txt']
     message = Night_writer.new(arguments)
     alphabet = Alphabet.new
@@ -20,8 +21,5 @@ RSpec.describe Translator do
     expect(text.top_array).to eq([["0", "."], ["0", "."], ["0", "0"], [".", "."]])
     expect(text.middle_array).to eq([[".", "."], ["0", "."], [".", "."], [".", "."]])
     expect(text.bottom_array).to eq([[".", "."], [".", "."], [".", "."], [".", "."]])
-
   end
-
-
 end
