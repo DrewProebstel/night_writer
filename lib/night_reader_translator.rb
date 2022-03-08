@@ -32,5 +32,12 @@ class Translator_reader
   end
 
 
+    def translate(braille_array)
+      translated_array = braille_array.map{|letter| alphabet[letter]}
+      binding.pry
+      translated_array.join
+      end
+
+
 
 end
