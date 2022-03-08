@@ -22,9 +22,9 @@ class Translator_reader
     index = 0
     (char_count/6).times do
       to_test = []
-      to_test.push(read_specfic_line((index/39)*4)[index*2%40..index*2%40+1])
-      to_test.push(read_specfic_line(1 + (index/39)*4)[index*2%40..index*2%40+1])
-      to_test.push(read_specfic_line(2 + (index/39)*4)[index*2%40..index*2%40+1])
+      to_test.push(read_specfic_line((index/40)*4)[index%40*2..index%40*2+1])
+      to_test.push(read_specfic_line(1 + (index/40)*4)[index%40*2..index%40*2+1])
+      to_test.push(read_specfic_line(2 + (index/40)*4)[index%40*2..index%40*2+1])
       final_array.push(to_test)
       index += 1
     end
@@ -32,11 +32,10 @@ class Translator_reader
   end
 
 
-    def translate(braille_array)
-      translated_array = braille_array.map{|letter| alphabet[letter]}
-      binding.pry
-      translated_array.join
-      end
+  def translate(braille_array)
+    translated_array = braille_array.map{|letter| alphabet[letter]}
+    translated_array.join
+  end
 
 
 

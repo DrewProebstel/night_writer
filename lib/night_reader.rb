@@ -15,10 +15,6 @@ class Night_reader
     incoming_text
   end
 
-  def write()
-
-  end
-
   def count_lines
     lines = File.readlines(@to_read)
     line_count = lines.size

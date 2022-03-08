@@ -15,8 +15,8 @@ RSpec.describe Translator_reader do
     expect(text.read_specfic_line(1)).to eq("00.00.00..\n")
   end
 
-  it "to test makes an array" do
-    argument = ['line_in_test.txt', 'output.txt']
+  xit "to test makes an array" do
+    argument = ['braille1.txt', 'output.txt']
     message = Night_reader.new(argument)
     alphabet = Alphabet_reader.new
     text = Translator_reader.new(message,alphabet)
@@ -24,10 +24,10 @@ RSpec.describe Translator_reader do
   end
 
   it "translate turns array into string" do
-    argument = ['line_in_test.txt', 'output.txt']
+    argument = ['braille1.txt', 'output.txt']
     message = Night_reader.new(argument)
     alphabet = Alphabet_reader.new
     text = Translator_reader.new(message,alphabet)
-    expect(text.translate(text.make_array)).to eq("test ")
+    expect(text.translate(text.make_array)).to eq("a b c d e f g h i j k l m n o p q r s t u v w x y z ")
   end
 end
