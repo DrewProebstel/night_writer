@@ -10,14 +10,14 @@ class Translator_reader
     @top_array = []
     @middle_array = []
     @bottom_array = []
-    @alphabet = alphabet
+    @alphabet = alphabet.alphabet
   end
 
   def read_specfic_line(line)
     specific_line = IO.readlines(text)[line]
   end
 
-  def translate
+  def make_array
     final_array = []
     index = 0
     (char_count/6).times do
@@ -30,5 +30,7 @@ class Translator_reader
     end
     return final_array
   end
+
+
 
 end

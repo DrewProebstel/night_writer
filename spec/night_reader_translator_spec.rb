@@ -20,6 +20,14 @@ RSpec.describe Translator_reader do
     message = Night_reader.new(argument)
     alphabet = Alphabet_reader.new
     text = Translator_reader.new(message,alphabet)
-    expect(text.translate).to eq([[".0", "00", "0."], ["0.", ".0", ".."], [".0", "0.", "0."], [".0", "00", "0."], ["..", "..", ".."]])
+    expect(text.make_array).to eq([[".0", "00", "0."], ["0.", ".0", ".."], [".0", "0.", "0."], [".0", "00", "0."], ["..", "..", ".."]])
+  end
+
+  it "translate turns array into string" do
+    argument = ['line_in_test.txt', 'output.txt']
+    message = Night_reader.new(argument)
+    alphabet = Alphabet_reader.new
+    text = Translator_reader.new(message,alphabet)
+    expect(text.translate(text.make_array)).to eq("test ")
   end
 end
