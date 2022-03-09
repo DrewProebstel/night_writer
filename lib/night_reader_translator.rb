@@ -3,10 +3,10 @@ require './lib/alphabet.rb'
 require 'pry'
 
 class Translator_reader
-  attr_accessor :text, :top_array, :bottom_array, :middle_array, :alphabet, :char_count
+  attr_accessor :text, :top_array, :bottom_array, :middle_array, :alphabet, :count_char
   def initialize(input,alphabet)
     @text = input.to_read
-    @char_count = input.count_lines
+    @count_char = input.count_char
     @top_array = []
     @middle_array = []
     @bottom_array = []
@@ -20,7 +20,7 @@ class Translator_reader
   def make_array
     final_array = []
     index = 0
-    (char_count/6).times do
+    count_char.times do
       to_test = []
       to_test.push(read_specfic_line((index/40)*4)[index%40*2..index%40*2+1])
       to_test.push(read_specfic_line(1 + (index/40)*4)[index%40*2..index%40*2+1])

@@ -16,11 +16,12 @@ class Night_reader
     incoming_text
   end
 
-  def count_lines
+  def count_char
     lines = File.readlines(@to_read)
     line_count = lines.size
     text = lines.join
-    text.length
+    num_new_line = text.count "\n"
+    (text.length - num_new_line)/6
   end
 
   def writes(translator)
@@ -35,5 +36,5 @@ if $0 == __FILE__
   text = Translator_reader.new(message,alphabet)
   message.get_message
   message.writes(text)
-  puts "Created '#{message.to_write}' containing #{message.count_lines/6} characters"
+  puts "Created '#{message.to_write}' containing #{message.count_char} characters"
 end
